@@ -2,9 +2,9 @@ import pymysql
 import itertools
 import streamlit as st
 
-#connection = pymysql.connect(**st.secrets["db_credentials"])
+connection = pymysql.connect(**st.secrets["db_credentials"])
 #connection = pymysql.connect(host="sql12.freesqldatabase.com",user="sql12608857",password="iXbr2KfZHR",db='sql12608857')
-connection = pymysql.connect(host='localhost',user='root',password='vedu',database="foodie")
+#connection = pymysql.connect(host='localhost',user='root',password='vedu',database="foodie")
 mc = connection.cursor()
 
 mc.execute('''CREATE TABLE if not exists  users (
